@@ -1,0 +1,62 @@
+<% include ../partials/header.ejs %>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-10">
+      <h3>Favourite Cars List</h3>
+      <!-- ------------------------ -->
+      <!-- FIX THE ADD BUTTON BELOW -->
+      <!-- ------------------------ -->
+      <a href="" class="btn btn-primary"
+        ><i class="fa fa-plus"></i> Add a car</a
+      >
+      <br />
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Car Name</th>
+              <th class="text-center">Car Model</th>
+              <th class="text-center">Category</th>
+              <th class="text-center">Price</th>
+              <th class="text-center"></th>
+               </tr>
+          </thead>
+          <tbody>
+            <!-- Template Row -->
+            <% for (let count = 0; count < cars.length; count++) { %>
+            <tr>
+              <td><%= cars[count].Carname %></td>
+
+              <td class="text-center"><%= cars[count].Category %></td>
+              <td class="text-center"><%= cars[count].Carmodel %></td>
+              <td class="text-center"><%= cars[count].Price %></td>
+
+              <td class="text-center">
+                <!-- ------------------------ -->
+                <!-- ADD the EDIT BUTTON HERE -->
+                <!-- ------------------------ -->
+              </td>
+
+              
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      <!-- ------------------------ -->
+                <!--FIX the DELETE BUTTON HERE -->
+                <!-- ------------------------ -->
+      <a href="" class="btn btn-warning btn-sm">
+        <i class="fas fa-trash"></i> Delete</a>
+    </main>
+      <div class="col-md-offset-1 col-md-10 text-center">
+        <ul class="pagination pagination-lg pager" id="myPager"></ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer.ejs %>
