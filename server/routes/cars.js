@@ -63,6 +63,12 @@ router.get("/delete", (req, res, next) => {
   /*****************
    * ADD CODE HERE *
    *****************/
+  /**
+   * Step 1: Retrieve criteria from query string
+   * Step 2: Check if the criteria is set. If so, add a flag
+   * Step 3: Determinate the filter by criteria
+   * Step 4: Apply filter to delete many section 
+   */
   // var deleteStatement = {};
   let targetName = req.query.name;
   let targetMinVal = req.query.minval;
